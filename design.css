@@ -7,10 +7,11 @@
 body{
     height: 100vh;
     font-weight: 100vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 0;
+    row-gap: 0;
     background-color: #FF7979;
-    align-items: center;
-    justify-content: center;
     padding: 0 2em;
 }
 
@@ -18,17 +19,17 @@ body{
     display: flex;
     flex-direction: column;
     font-size: x-large;
-    width: 100%;
+    width: fit-content;
 }
 
 .content-container h1{
-    width: 60%;
+    width: 80%;
     font-size: 2em;
 }
 
 .content-container p{
     font-size: medium;
-    width: 50%;
+    width: 70%;
 }
 
 
@@ -40,11 +41,12 @@ body{
 .trial-form{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: fit-content;
     height: fit-content;
     background-color: #FFFFFF;
     padding: 3em;
     border-radius: 1em;
+   
 }
 
 input{
@@ -59,9 +61,4 @@ button{
     margin-top: 1em;
     margin-bottom: 2em;
     border-radius: 0.5em;
-}
-
-.right-container{
-    width: fit-content;
-    
 }
