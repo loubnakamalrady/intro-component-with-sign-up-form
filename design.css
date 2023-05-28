@@ -13,6 +13,8 @@ body{
     row-gap: 0;
     background-color: #FF7979;
     padding: 0 2em;
+    justify-content: center;
+    align-items: center;
 }
 
 .content-container{
@@ -20,16 +22,19 @@ body{
     flex-direction: column;
     font-size: x-large;
     width: fit-content;
+    margin-left: 4em;
+    color: #FFFFFF;
 }
 
 .content-container h1{
     width: 80%;
     font-size: 2em;
+
 }
 
 .content-container p{
     font-size: medium;
-    width: 70%;
+    width: 80%;
 }
 
 
@@ -41,24 +46,63 @@ body{
 .trial-form{
     display: flex;
     flex-direction: column;
-    width: fit-content;
+    width: 72%;
     height: fit-content;
     background-color: #FFFFFF;
-    padding: 3em;
+    padding: 2em 3em;
     border-radius: 1em;
-   
+    color: #3D3B48;   
 }
 
 input{
-    padding: 1.2em;
+    padding: 1.5em;
     margin-top: 1.5em;
     margin-bottom: 1em;
     border-radius: 0.5em;
+    border:solid rgb(176, 179, 182);
+    border-width: thin;
+}
+
+.tbtn-form button{
+    background-color: #38CC8B;
+    box-shadow: 0px 8px 0px #33bc81;
+    color: #FFFFFF;
 }
 
 button{
-    padding: 1.2em;
+    padding: 0.9em 1.2em;
     margin-top: 1em;
     margin-bottom: 2em;
     border-radius: 0.5em;
+    border: none;
+    font-size: 1em;
+
 }
+
+.trial-btn{
+    color: #FFFFFF;
+    width: 85%;
+    background-color: #5E54A4;
+    box-shadow: 0px 8px rgb(151, 151, 151, 0.4);
+}
+
+.trial-btn span{
+    font-weight: bolder;
+}
+
+
+.trial-form p span{
+    font-weight: bold;
+    background: #FF7979;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.trial-form p{
+    text-align: center;
+    font-size: smaller;
+    background: #121FCF;
+    background: linear-gradient(to right, #A6A1CF 0%, #BAB7D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
