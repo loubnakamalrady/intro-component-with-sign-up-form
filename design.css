@@ -69,6 +69,10 @@ input{
     color: #FFFFFF;
 }
 
+.tbtn-form button:hover{
+    background-color: #77E2B3;
+}
+
 button{
     padding: 0.9em 1.2em;
     margin-top: 1em;
@@ -76,6 +80,7 @@ button{
     border-radius: 0.5em;
     border: none;
     font-size: 1em;
+    cursor: pointer;
 
 }
 
