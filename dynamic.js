@@ -3,11 +3,14 @@ const fname = document.querySelector('#fname');
 const lname = document.querySelector('#lname')
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
+const button = document.querySelector('.claim_button');
 
-form.addEventListener('submit', e=>{
+button.addEventListener('click', e=>{
     e.preventDefault();
 
     validateInputs();
+
+    console.log("helloword");
 
 });
 
