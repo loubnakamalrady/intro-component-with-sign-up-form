@@ -7,47 +7,84 @@ const password = document.querySelector('#password');
 form.addEventListener('submit', e=>{
     e.preventDefault();
 
+    validateInputs();
+
+});
+
+// function errorFunction(request, message){
+//     const formControl = request.parentElement;
+//     const span = formControl.querySelector('input');
+//     input.innerText = message;
+//     request.className += 'new-form';
+//     span.className += 'error-text';
+// }
+
+// function successFunction(request){
+//     request.className += 'success';
+// }
+
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+    
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success');
+}
+
+const setSuccess = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+    
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+}
+
+
+const validateInputs = () => {
     var firstName = fname.value.trim();
     var lastName = lname.value.trim();
     var emailAddress = email.value.trim();
     var password_1 = password.value.trim();
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    return validRegex.test(String(email).toLowerCase());
 
     if(firstName === ''){
-        errorFunction(firstName, 'First Name cannot be empty');
+        setError(fname, 'First Name cannot be empty')
     }
     else{
-        successFunction(firstName);
+        setSuccess(fname);
     }
-    
+
     if(lastName === ''){
-        errorFunction(lastName, 'Last Name cannot be empty');
+        setError(lname, 'Last Name cannot be empty')
     }
     else{
-        successFunction(lastName);
+        setSuccess(lname);
     }
 
     if(emailAddress === ''){
-        errorFunction(emailAddress, 'Email address cannot be empty');
+        setError(email, 'Email cannot be empty')
     }
     else if(!emailAddress.value.match(validRegex)){
-        errorFunction(emailAddress, 'Please enter a valid email address');
+        setError(email, 'Looks like this is not an email')
     }
     else{
-        successFunction(emailAddress);
+        setSuccess(email);
     }
 
-});
-
-function errorFunction(request, message){
-    const formControl = request.parentElement;
-    const span = formControl.querySelector('input');
-    input.innerText = message;
-    request.className += 'new-form';
-    span.className += 'error-text';
+    if(password_1 === ''){
+        setError(password, 'Password cannot be empty')
+    }
+    else if(password_1.length < 8 && password_1.length > 20){
+        setError(password, 'Password must be 8 characters or 20 characters max')
+    }
+    else{
+        setSuccess(password);
+    }
 }
 
-function successFunction(request){
-    request.className += 'success';
-}
+
+
 

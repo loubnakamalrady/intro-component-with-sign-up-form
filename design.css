@@ -111,3 +111,21 @@ button{
     -webkit-text-fill-color: transparent;
 }
 
+.tbtn-form.success input{
+        padding: 1.5em;
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+        border-radius: 0.5em;
+        border:solid rgb(50, 217, 92);
+        border-width: thin;
+}
+
+.tbtn-form.error{
+    padding: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    border:solid #FF7979;
+    border-width: thin;
+}
+
