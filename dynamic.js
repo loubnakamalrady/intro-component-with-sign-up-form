@@ -44,14 +44,16 @@ const setSuccess = (element, message) => {
     inputControl.classList.remove('error');
 }
 
+const isvalidEmail = email => {
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    return validRegex.test(String(email).toLowerCase());
+}
 
 const validateInputs = () => {
     var firstName = fname.value.trim();
     var lastName = lname.value.trim();
     var emailAddress = email.value.trim();
     var password_1 = password.value.trim();
-    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    return validRegex.test(String(email).toLowerCase());
 
     if(firstName === ''){
         setError(fname, 'First Name cannot be empty')
