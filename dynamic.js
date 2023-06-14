@@ -72,8 +72,8 @@ const validateInputs = () => {
     if(emailAddress === ''){
         setError(email, 'Email cannot be empty')
     }
-    else if(!emailAddress.value.match(validRegex)){
-        setError(email, 'Looks like this is not an email')
+    else if(!emailAddress.match(isvalidEmail)){
+        setError(email, 'Looks like this is not an email');
     }
     else{
         setSuccess(email);
@@ -82,7 +82,7 @@ const validateInputs = () => {
     if(password_1 === ''){
         setError(password, 'Password cannot be empty')
     }
-    else if(password_1.length < 8 && password_1.length > 20){
+    else if(password_1.length < 8 || password_1.length > 20){
         setError(password, 'Password must be 8 characters or 20 characters max')
     }
     else{

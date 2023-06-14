@@ -34,7 +34,7 @@ body{
 
 .content-container p{
     font-size: medium;
-    width: 80%;
+    width: 75%;
 }
 
 
@@ -46,10 +46,12 @@ body{
 .trial-form{
     display: flex;
     flex-direction: column;
-    width: 72%;
+    width: 33em;
+    justify-content: center;
+    align-items: center;
     height: fit-content;
     background-color: #FFFFFF;
-    padding: 2em 3em;
+    padding:2em 3em;
     border-radius: 1em;
     color: #3D3B48;   
 }
@@ -61,6 +63,7 @@ input{
     border-radius: 0.5em;
     border:solid rgb(176, 179, 182);
     border-width: thin;
+    width: 90%
 }
 
 .tbtn-form button{
@@ -127,5 +130,10 @@ button{
     border-radius: 0.5em;
     border:solid #FF7979;
     border-width: thin;
+}
+
+
+@media screen and (min-width: 480px) {
+    
 }
 
